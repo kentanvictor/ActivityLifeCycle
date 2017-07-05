@@ -1,7 +1,7 @@
 package com.example.dell.activitylifecycle;
 
-/**
- * Created by DELL on 2017/7/5.
+/*
+ * Created by kentanvictor on 2017/7/5.
  */
 public class TureFalse {
     private int mQuestion;

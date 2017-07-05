@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView mQuestionTextView;
 
-    TureFalse[] mQuestionStore = new TureFalse[] {
+    TureFalse[] mQuestionStore = new TureFalse[]{
             new TureFalse(R.string.question_1, true),
             new TureFalse(R.string.question_2, false),
             new TureFalse(R.string.question_3, false),
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = mQuestionStore[mCurrentIndex].isTrueQuestion();
 
-        int messageResId = 0;
+        int messageResId = 1;
 
         if (userPressedTrue == answerIsTrue) {
             messageResId = R.string.correct_toast;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         //mQuestionTextView = (TextView)findViewById(R.id.question_text_view);
 
-        mTrueButton = (Button)findViewById(R.id.true_button);
+        mTrueButton = (Button) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mFalseButton = (Button)findViewById(R.id.false_button);
+        mFalseButton = (Button) findViewById(R.id.false_button);
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mNextButton = (Button)findViewById(R.id.next_button);
+        mNextButton = (Button) findViewById(R.id.next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
