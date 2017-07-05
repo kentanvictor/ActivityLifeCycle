@@ -30,15 +30,18 @@ public class MainActivity extends AppCompatActivity {
 
     int mCurrentIndex = 0;
 
+
     private void updateQuestion() {
         int question = mQuestionStore[mCurrentIndex].getQuestion();
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+/*        Log.i(TAG, "updateQuestion: "+ question);*/
         mQuestionTextView.setText(question);
     }
 
     private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = mQuestionStore[mCurrentIndex].isTrueQuestion();
 
-        int messageResId = 1;
+        int messageResId = 0;
 
         if (userPressedTrue == answerIsTrue) {
             messageResId = R.string.correct_toast;
